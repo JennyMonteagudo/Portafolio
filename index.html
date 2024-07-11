@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Web</title>
+    <!-- Importación de fuentes y Font Awesome -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Ubuntu:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <!-- Logo para la navegación a Home -->
+            <a href="index.html" class="navbar__logo"><img src="assets/Identidad y Vectores_Mesa de trabajo 1 copia 5.png" alt="Home Icon"></a>
+            <button class="navbar__abrir">Abrir</button>
+            <!-- Menú de navegación -->
+            <ul class="navbar__menu">
+                <button class="navbar__cerrar">Cerrar</button>
+                <li class="navbar__item"><a href="#about" class="navbar__link">Sobre Mí</a></li>
+                <li class="navbar__item"><a href="#portfolio" class="navbar__link">Portafolio</a></li>
+                <li class="navbar__item"><a href="#services" class="navbar__link">Servicios</a></li>
+                <li class="navbar__item"><a href="#contact" class="navbar__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Sección de presentación -->
+        <section class="home">
+            <div class="presentation">
+
+                <div class="presentation__text">
+                    <h1 class="presentation__title">HOLA, <br> SOY JENNY</h1>
+                    <img src="assets/fotoperfil.jpg" alt="Tu Foto" class="presentation__image">
+                </div>
+
+                <p class="presentation__description">Soy una dise;adora industrial de profesion y grafica de corazon.
+                    Soy cubana y apasionada de la moda</p>
+            </div>
+            <div class="habilidades">
+                <div class="habilidades__container">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+            <h2 class="gallery__tittle">PROYECTOS <br> DESTACADOS</h2>
+            <div class="gallery__grid">
+                <div class="gallery__container">
+                    <a href="project1.html"><img class="gallery__img" title="imagen1"
+                            src="imgs/pexels-leah-newhouse-50725-2090641.jpg" alt="">
+                        <h3 class="gallery__name">imagen 1</h3>
+                    </a>
+                </div>
+                <div class="gallery__container">
+                    <a href="project1.html"><img class="gallery__img " title="imagen1"
+                            src="assets/blankpresentacion.jpg" alt="">
+                        <h3 class="gallery__name">imagen 2</h3>
+                    </a>
+                </div>
+                <div class="gallery__container">
+                    <a href="project1.html"><img class="gallery__img " title="imagen1"
+                            src="imgs/pexels-vasanth-babu-150247-797793.jpg" alt="">
+                        <h3 class="gallery__name">imagen 3</h3>
+                    </a>
+                </div>
+                <div class="gallery__container">
+                    <a href="project1.html"><img class="gallery__img gallery__img--vdoble" title="imagen1"
+                            src="imgs/pexels-zydeaosika-3987613.jpg" alt="">
+                        <h3 class="gallery__name">imagen 4</h3>
+                    </a>
+                </div>
+                <div class="gallery__container">
+                    <a href="project1.html"><img class="gallery__img " title="imagen1"
+                            src="imgs/pexels-vasanth-babu-150247-797793.jpg" alt="">
+                        <h3 class="gallery__name">imagen 3</h3>
+                    </a>
+                </div>
+                <div class="gallery__container">
+                    <a href="project1.html"><img class="gallery__img gallery__img--vdoble" title="imagen1"
+                            src="imgs/pexels-zydeaosika-3987613.jpg" alt="">
+                        <h3 class="gallery__name">imagen 4</h3>
+                    </a>
+                </div>
+            </div>
+            <a href="portafolio.html">Ver el portafolio</a>
+
+        </section>
+        <!-- Sección de portafolio con slider de proyectos -->
+
+
+
+        <!-- Sección de servicios -->
+         <section class="servicioshome">
+            <div class="servicioshome__container"><h2 class="servicioshome__tittle">SERVICIOS</h2></div>
+            <div class="accordion">
+                <div class="accordion__item">
+                    <div class="accordion__header">Diseño Web</div>
+                    <div class="accordion__content"><p>Me encargo del diseño de tu página web. Desde la conceptualización, análisis UI y UX, hasta la maquetación, ya sea en <strong>WordPess</strong> o <strong>HTML, CSS y JS</strong></p><a class="acordeon__a" href="servicios.html">Saber más</a></div>
+                    
+                </div>
+                <div class="accordion__item">
+                    <div class="accordion__header">Branding</div>
+                    <div class="accordion__content"><p>¿Necesitas una identidad para tu empresa? Yo me encargo de hacer que tu marca sea única y reconocible.</p><a class="acordeon__a" href="servicios.html">Saber más</a> </div>
+                </div>
+                <div class="accordion__item">
+                    <div class="accordion__header">Diseño de Interiores</div>
+                    <div class="accordion__content"><p>Bloque de Información 2</p><a class="acordeon__a" href="servicios.html">Saber más</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="tab-container">
+                <div class="tabs">
+                    <div class="tab" data-tab="1">Pestaña 1</div>
+                    <div class="tab" data-tab="2">Pestaña 2</div>
+                    <div class="tab" data-tab="3">Pestaña 3</div>
+                </div>
+                <div class="tab-content" id="tab-content-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                <div class="tab-content" id="tab-content-2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+                <div class="tab-content" id="tab-content-3">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+            </div>
+            
+            
+        </section>
+
+
+        
+        <!-- Sección de contacto -->
+        <section id="contact" class="contact">
+            <h2 class="contact__title">Contacto</h2>
+            <form class="contact__form">
+                <label for="name" class="contact__label">Nombre:</label>
+                <input type="text" id="name" name="name" class="contact__input">
+                <label for="email" class="contact__label">Email:</label>
+                <input type="email" id="email" name="email" class="contact__input">
+                <label for="message" class="contact__label">Mensaje:</label>
+                <textarea id="message" name="message" class="contact__textarea"></textarea>
+                <button type="submit" class="contact__button">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
