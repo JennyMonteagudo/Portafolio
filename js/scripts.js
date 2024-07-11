@@ -1,4 +1,45 @@
-document.addEventListener('DOMContentLoaded', () => {
+
+    //Menu desplegable mobile
+    const nav= document.querySelector(".navbar__menu");
+    const abrir= document.querySelector("#abrir");
+    const cerrar= document.querySelector("#cerrar");
+
+    abrir.addEventListener("click", () =>{
+        nav.classList.add("visible");
+    })
+
+    cerrar.addEventListener("click", () =>{
+        nav.classList.remove("visible");
+    })
+
+    // carrusel de habilidades
+    document.addEventListener('DOMContentLoaded', function() {
+        const track = document.querySelector('.carousel__track');
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const cards = document.querySelectorAll('.carousel__card');
+        const cardWidth = cards[0].offsetWidth;
+        let currentIndex = 0;
+
+        function moveToCard(index) {
+            track.style.transform = 'translateX(' + (-index * cardWidth) + 'px)';
+        }
+
+        nextButton.addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % cards.length;
+            moveToCard(currentIndex);
+        });
+
+        prevButton.addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+            moveToCard(currentIndex);
+        });
+
+        window.addEventListener('resize', function() {
+            moveToCard(currentIndex);
+        });
+    });
+
     // Navegación suave al hacer clic en los enlaces del menú
     const navbarLinks = document.querySelectorAll('.header__menu-item a');
 
@@ -11,74 +52,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Datos de los proyectos
-    const projects = [
-        { title: 'Proyecto 1', image: 'https://via.placeholder.com/300', link: 'project1.html' },
-        { title: 'Proyecto 2', image: 'https://via.placeholder.com/300', link: 'project2.html' },
-        // Añadir más proyectos según sea necesario
-    ];
-
-    
-    const slider = document.querySelector('.portfolio__slider');
-
-    projects.forEach(project => {
-        const projectDiv = document.createElement('div');
-        projectDiv.classList.add('portfolio__project');
-
-        const projectImage = document.createElement('img');
-        projectImage.src = project.image;
-        projectImage.alt = project.title;
-        projectImage.addEventListener('click', () => {
-            window.location.href = project.link;
-        });
-
-        const projectTitle = document.createElement('div');
-        projectTitle.classList.add('portfolio__project-title');
-        projectTitle.textContent = project.title;
-
-        projectDiv.appendChild(projectImage);
-        projectDiv.appendChild(projectTitle);
-        slider.appendChild(projectDiv);
-    });
-});
-
-// Creación del slider de proyectos
-
-document.addEventListener('DOMContentLoaded', () => {
-    const sliderContainer = document.querySelector('.slider__image-container');
-    const images = document.querySelectorAll('.slider__image');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const currentSlide = document.getElementById('currentSlide');
-    const totalSlides = document.getElementById('totalSlides');
-    let currentIndex = 0;
-
-    totalSlides.textContent = images.length;
-
-    function actualizarSlider() {
-        const width = images[0].clientWidth; // Obtener el ancho de la primera imagen
-        sliderContainer.style.transform = `translateX(-${currentIndex * width}px)`;
-    }
-
-    function actualizarContador() {
-        currentSlide.textContent = currentIndex + 1;
-    }
-
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-        actualizarSlider();
-        actualizarContador();
-    });
-
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-        actualizarSlider();
-        actualizarContador();
-    });
-
-    window.addEventListener('resize', actualizarSlider);
-    actualizarSlider();
-});
 
 // Acordeon de servicios
 //

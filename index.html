@@ -17,10 +17,10 @@
         <nav class="navbar">
             <!-- Logo para la navegación a Home -->
             <a href="index.html" class="navbar__logo"><img src="assets/Identidad y Vectores_Mesa de trabajo 1 copia 5.png" alt="Home Icon"></a>
-            <button class="navbar__abrir">Abrir</button>
+            <i id="abrir" class="fa-solid fa-bars navbar__abrir"></i>
             <!-- Menú de navegación -->
             <ul class="navbar__menu">
-                <button class="navbar__cerrar">Cerrar</button>
+                <i id="cerrar" class="fa-solid fa-xmark navbar__cerrar"></i>
                 <li class="navbar__item"><a href="#about" class="navbar__link">Sobre Mí</a></li>
                 <li class="navbar__item"><a href="#portfolio" class="navbar__link">Portafolio</a></li>
                 <li class="navbar__item"><a href="#services" class="navbar__link">Servicios</a></li>
@@ -32,21 +32,66 @@
         <!-- Sección de presentación -->
         <section class="home">
             <div class="presentation">
-
                 <div class="presentation__text">
                     <h1 class="presentation__title">HOLA, <br> SOY JENNY</h1>
                     <img src="assets/fotoperfil.jpg" alt="Tu Foto" class="presentation__image">
                 </div>
-
                 <p class="presentation__description">Soy una dise;adora industrial de profesion y grafica de corazon.
                     Soy cubana y apasionada de la moda</p>
             </div>
-            <div class="habilidades">
-                <div class="habilidades__container">
-                    <img src="" alt="">
+            
+            <!-- carrusel de habilidades-->
+            <div class="carousel">
+                <div class="carousel__track">
+                    <div class="carousel__card">
+                        <i class="fa-solid fa-palette"></i>
+                        <p>WORDPRESS</p>
+                    </div>
+                    <div class="carousel__card">
+                        <img src="https://via.placeholder.com/50" alt="Icono 2">
+                        <p>Habilidad 2</p>
+                    </div>
+                    <div class="carousel__card">
+                        <img src="https://via.placeholder.com/50" alt="Icono 3">
+                        <p>Habilidad 3</p>
+                    </div>
+                    <div class="carousel__card">
+                        <img src="https://via.placeholder.com/50" alt="Icono 4">
+                        <p>Habilidad 4</p>
+                    </div>
+                    <div class="carousel__card">
+                        <img src="https://via.placeholder.com/50" alt="Icono 5">
+                        <p>Habilidad 5</p>
+                    </div>
+                    <div class="carousel__card">
+                        <img src="https://via.placeholder.com/50" alt="Icono 6">
+                        <p>Habilidad 6</p>
+                    </div>
+                    <div class="carousel__card">
+                        <img src="https://via.placeholder.com/50" alt="Icono 7">
+                        <p>Habilidad 7</p>
+                    </div>
+                    <div class="carousel__card">
+                        <img src="https://via.placeholder.com/50" alt="Icono 8">
+                        <p>Habilidad 8</p>
+                    </div>
+                    <div class="carousel__card">
+                        <img src="https://via.placeholder.com/50" alt="Icono 9">
+                        <p>Habilidad 9</p>
+                    </div>
+                    <div class="carousel__card">
+                        <img src="https://via.placeholder.com/50" alt="Icono 10">
+                        <p>Habilidad 10</p>
+                    </div>
+                </div>
+                <div class="carousel__buttons">
+                    <i class="fa-solid fa-angle-left carousel__button" id="prevButton"></i>
+                    <i class="fa-solid fa-angle-right carousel__button" id="nextButton"></i>
                 </div>
             </div>
-        </section>
+        
+
+        <!-- Sección de galeria de proyectos -->
         <section class="gallery">
             <h2 class="gallery__tittle">PROYECTOS <br> DESTACADOS</h2>
             <div class="gallery__grid">
