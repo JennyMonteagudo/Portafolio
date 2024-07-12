@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,21 +10,88 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header class="header">
         <nav class="navbar">
             <!-- Logo para la navegación a Home -->
-            <a href="#home" class="navbar__logo"><img src="assets/Identidad y Vectores_Mesa de trabajo 1 copia 5.png"
-                    alt="Home Icon"></a>
+            <a href="index.html" class="navbar__logo"><img
+                    src="assets/Identidad y Vectores_Mesa de trabajo 1 copia 5.png" alt="Home Icon"></a>
+            <i id="abrir" class="fa-solid fa-bars navbar__abrir"></i>
             <!-- Menú de navegación -->
             <ul class="navbar__menu">
-                <li class="navbar__item"><a href="#about" class="navbar__link">Sobre Mí</a></li>
-                <li class="navbar__item"><a href="#portfolio" class="navbar__link">Portafolio</a></li>
-                <li class="navbar__item"><a href="#services" class="navbar__link">Servicios</a></li>
-                <li class="navbar__item"><a href="#contact" class="navbar__link">Contacto</a></li>
+                <i id="cerrar" class="fa-solid fa-xmark navbar__cerrar"></i>
+                <li class="navbar__item"><a href="sobremi.html" class="navbar__link">Sobre Mí</a></li>
+                <li class="navbar__item"><a href="portafolio.html" class="navbar__link">Portafolio</a></li>
+                <li class="navbar__item"><a href="servicios.html" class="navbar__link">Servicios</a></li>
+                <li class="navbar__item"><a href="contacto.html" class="navbar__link">Contacto</a></li>
             </ul>
         </nav>
     </header>
-    
+    <main>
+        <section class="sectionSlider">
+            <div class="slider">
+                <div class="slider__container">
+                    <img class="slider__image" src="assets/bedroom2.webp" alt="Imagen 1">
+                    <img class="slider__image" src="assets/IberostarPlayaAlameda1.webp" alt="Imagen 2">
+                    <img class="slider__image" src="assets/BalanceBike1.webp" alt="Imagen 3">
+                    <img class="slider__image" src="assets/blankpresentacion.jpg" alt="Imagen 4">
+                    <img class="slider__image" src="assets/bedroom4.webp" alt="Imagen 5">
+                </div>
+                <i class="fa-solid fa-angle-left slider__button slider__button--prev"></i>
+                <i class="fa-solid fa-angle-right slider__button slider__button--next"></i>
+            </div>
+        </section>
+        <section>
+            <div class="proyectos">
+                <!--Proyectos con formato horizontal de foto-->
+                <div class="proyectos__container proyectos__container--hor">
+                    <div class="proyectos__foto proyectos__foto--hor">
+                        <h1 class="proyectos__tittle">INTERIORES</h1>
+                        <a href="proyectoBedroom.html"><img class="proyectos__imgPrincipal proyectos__imgPrincipal--hor"
+                                src="assets/bedroom1.webp" alt=""></a>
+                    </div>
+                    <div class="proyectos__info proyectos__info--hor">
+                        <h3>TOMASELLA</h3>
+                        <p>Este es un proyecto para el dise;o de interiores de una habitacion de hotel.Este es un
+                            proyecto para el dise;o de interiores de una habitacion de hotel</p>
+                        <a href="">ver mas</a>
+                    </div>
+                </div>
+                <!--Proyectos con formato vertical de foto-->
+                <div class="proyectos__container proyectos__container--ver">
+                    <div class="proyectos__foto proyectos__foto--ver">
+                        <a href="proyectoBedroom.html"><img class="proyectos__imgPrincipal proyectos__imgPrincipal--ver"
+                                src="assets/IberostarPlayaAlameda1.webp" alt=""></a>
+                    </div>
+                    <div class="proyectos__info proyectos__info--ver">
+                        <h3>IBEROSTAR PLAYA ALAMEDA</h3>
+                        <p>Este es un proyecto para el dise;o de interiores de una habitacion de hotel.Este es un
+                            proyecto
+                            para el dise;o de interiores de una habitacion de hotel</p>
+                        <a href="">ver mas</a>
+                    </div>
+                </div>
+
+
+                <div class="proyectos__container proyectos__container--hor">
+                    <div class="proyectos__foto proyectos__foto--hor">
+                        <a href="proyectoBedroom.html"><img class="proyectos__imgPrincipal proyectos__imgPrincipal--hor"
+                                src="assets/bedroom1.webp" alt=""></a>
+                    </div>
+                    <div class="proyectos__info proyectos__info--hor">
+                        <h3>TOMASELLA</h3>
+                        <p>Este es un proyecto para el dise;o de interiores de una habitacion de hotel.Este es un
+                            proyecto para el dise;o de interiores de una habitacion de hotel</p>
+                        <a href="">ver mas</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="js/scripts.js"></script>
 </body>
+
 </html>

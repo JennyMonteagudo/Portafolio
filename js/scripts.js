@@ -95,3 +95,57 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+
+//-------------------------------------//
+//-------------PORTAFOLIO-------------//
+//------------------------------------//
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.slider__container');
+    const prevButton = document.querySelector('.slider__button--prev');
+    const nextButton = document.querySelector('.slider__button--next');
+    const images = document.querySelectorAll('.slider__image');
+    const imageCount = images.length;
+    let currentIndex = 0;
+    let interval;
+
+    function moveToImage(index) {
+        track.style.transform = 'translateX(' + (-index * 100) + '%)';
+    }
+
+    function autoPlay() {
+        currentIndex = (currentIndex + 1) % imageCount;
+        moveToImage(currentIndex);
+    }
+
+    function startAutoPlay() {
+        interval = setInterval(autoPlay, 3000);
+    }
+
+    function stopAutoPlay() {
+        clearInterval(interval);
+    }
+
+    nextButton.addEventListener('click', function() {
+        stopAutoPlay();
+        currentIndex = (currentIndex + 1) % imageCount;
+        moveToImage(currentIndex);
+        startAutoPlay();
+    });
+
+    prevButton.addEventListener('click', function() {
+        stopAutoPlay();
+        currentIndex = (currentIndex - 1 + imageCount) % imageCount;
+        moveToImage(currentIndex);
+        startAutoPlay();
+    });
+
+    window.addEventListener('resize', function() {
+        moveToImage(currentIndex);
+    });
+
+    startAutoPlay();
+});

@@ -78,11 +78,8 @@ h2{
 .navbar__link {
     color: wheat;
     text-decoration: none;
-
 }
-.fa-xmark {
 
-}
 @media screen and (min-width: 768px) {
     .presentation {
         justify-content: end;
@@ -263,7 +260,8 @@ h1, h2 {
 
 @media (min-width: 1024px) {
     .carousel__card {
-        min-width: 10%;
+        min-width: 20%;
+        height: 100px;
     }
 }
 /*Gallery*/
@@ -318,7 +316,7 @@ h1, h2 {
 }
 .servicioshome__tittle{
     position: absolute;
-    rotate: -90deg;
+    transform: rotate(-90deg);
     top: 120px;
     left: -60px;
     font-size: 2.3em;
@@ -475,96 +473,122 @@ h1, h2 {
     cursor: pointer;
 }
 
-/* Media Queries para hacer el diseño adaptable */
-
-
-
-
-.slider{
-    overflow: hidden;
-    border: 2px solid lightskyblue;
-    border-radius: 10px;
-    position: relative;
-}
-.slider__images{
-    display: flex;
-    width: 100vw;
-    height: 300px;
-    transition: transform 1s ease;
-}
-.slider__images img{
-    min-width: 100vw;
-    max-width: 500px;
-    min-height: 900px;
-    max-height: 500px;
-
-}
-
-.btnPrev{
-    left: 0;
-}
-.btnNext{
-    right: 0;
-}
-
-
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
+/* ----------------------------*/
+/* ------PORTAFOLIO -----------*/
+/* ----------------------------*/
+.sectionSlider{
     padding: 0;
-    box-sizing: border-box;
 }
-
 .slider {
-    position: relative;
     width: 100%;
-    max-width: 800px;
-    
     overflow: hidden;
+    position: relative;
+    height: 400px;
+    padding: 0;
 }
 
 .slider__container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.slider__image-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 
 .slider__image {
     min-width: 100%;
-    transition: opacity 0.5s ease-in-out;
+    height: 400px;
+    object-fit: cover;
 }
 
-.slider__arrow {
+.slider__button {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 2rem;
-    color: #fff;
-    background-color: rgba(0, 0, 0, 0.5);
     border: none;
+    color: rgb(41, 41, 41);
+    font-size: 24px;
     cursor: pointer;
-    z-index: 100;
-    padding: 0.5rem;
-    border-radius: 50%;
+    padding: 10px;
+    z-index: 1;
 }
 
-.slider__arrow--left {
+.slider__button--prev {
     left: 10px;
 }
 
-.slider__arrow--right {
+.slider__button--next {
     right: 10px;
 }
 
-.slider__counter {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 1.2rem;
+@media (min-width: 600px) {
+    .slider {
+        height: 400px;
+    }
+}
+
+/*Seccion de proyectos individuales*/
+.proyectos{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0px;
+}
+.proyectos__container{
+    display: flex;
+    position: relative;
+}
+.proyectos__container--hor{
+    padding-bottom: 120px;
+}
+.proyectos__imgPrincipal--hor{
+    width: 95%;
+    justify-content: end;
+    padding-left: 40px;
+    object-fit: cover;
+}
+.proyectos__foto{
+    position: relative;
+    display: flex;
+    align-content: center;
+}
+.proyectos__tittle{
+    font-size: 3.3rem;
+    position:absolute;
+    left: -8.1rem;
+    top: 7rem;
+    transform: rotate(-90deg);
+}
+.proyectos__info--hor{
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(37, 110, 219);
+    width: 75%;
+    padding: 1rem;
+    box-shadow: 3px 3px 15px rgb(41, 41, 41);
+    position: absolute;
+    top: 50%;
+    left: 20vw;
+    gap: 1rem;
+}
+.proyectos__imgPrincipal--ver{
+    width: 65vw;
+    height: 500px;
+    justify-content: end;
+    object-fit: cover;
+}
+.proyectos__container--ver{
+    position: relative;
+    padding-bottom: 4rem;
+    padding-top: 5rem;
+}
+.proyectos__info--ver{
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(185, 136, 62);
+    width: 45vw;
+    padding: 1rem;
+    box-shadow: 3px 3px 15px rgb(41, 41, 41);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    gap: 1rem;
 }
