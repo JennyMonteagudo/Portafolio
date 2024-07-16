@@ -1,0 +1,44 @@
+<!-- proyecto.html -->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portafolio Web</title>
+        <!-- Importación de fuentes y Font Awesome -->
+        <link rel="stylesheet" href="css/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Ubuntu:wght@700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <!-- Logo para la navegación a Home -->
+            <a href="index.html" class="navbar__logo"><img
+                    src="assets/Identidad y Vectores_Mesa de trabajo 1 copia 5.png" alt="Home Icon"></a>
+            <i id="abrir" class="fa-solid fa-bars navbar__abrir"></i>
+            <!-- Menú de navegación -->
+            <ul class="navbar__menu">
+                <i id="cerrar" class="fa-solid fa-xmark navbar__cerrar"></i>
+                <li class="navbar__item"><a href="sobremi.html" class="navbar__link">Sobre Mí</a></li>
+                <li class="navbar__item"><a href="portafolio.html" class="navbar__link">Portafolio</a></li>
+                <li class="navbar__item"><a href="servicios.html" class="navbar__link">Servicios</a></li>
+                <li class="navbar__item"><a href="contacto.html" class="navbar__link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="project__container">
+        <h1 id="project-title" class="project__title"></h1>
+        <h2 id="project-subtitle" class="project__subtitle"></h2>
+        <p id="project-description" class="project__description"></p>
+        <div id="project-images" class="project__images-container">
+            <!-- Las imágenes se agregarán aquí -->
+        </div>
+        <div id="project-tools" class="project__tools-container">
+            <!-- Los iconos de herramientas se agregarán aquí -->
+        </div>
+    </div>
+    <script src="js/templatescript.js"></script>
+</body>
+</html>

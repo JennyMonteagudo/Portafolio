@@ -1,10 +1,12 @@
+<!-- portafolio.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Portafolio Web</title>
+    <!-- Importación de fuentes y Font Awesome -->
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Ubuntu:wght@700&display=swap"
         rel="stylesheet">
@@ -28,69 +30,95 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="sectionSlider">
-            <div class="slider">
-                <div class="slider__container">
-                    <img class="slider__image" src="assets/bedroom2.webp" alt="Imagen 1">
-                    <img class="slider__image" src="assets/IberostarPlayaAlameda1.webp" alt="Imagen 2">
-                    <img class="slider__image" src="assets/BalanceBike1.webp" alt="Imagen 3">
-                    <img class="slider__image" src="assets/blankpresentacion.jpg" alt="Imagen 4">
-                    <img class="slider__image" src="assets/bedroom4.webp" alt="Imagen 5">
-                </div>
-                <i class="fa-solid fa-angle-left slider__button slider__button--prev"></i>
-                <i class="fa-solid fa-angle-right slider__button slider__button--next"></i>
+
+    <section class="sectionSlider">
+        <div class="slider">
+            <div class="slider__container">
+                <img class="slider__image" src="assets/bedroom2.webp" alt="Imagen 1">
+                <img class="slider__image" src="assets/IberostarPlayaAlameda1.webp" alt="Imagen 2">
+                <img class="slider__image" src="assets/BalanceBike1.webp" alt="Imagen 3">
+                <img class="slider__image" src="assets/blankpresentacion.jpg" alt="Imagen 4">
+                <img class="slider__image" src="assets/bedroom4.webp" alt="Imagen 5">
             </div>
-        </section>
-        <section>
-            <div class="proyectos">
-                <!--Proyectos con formato horizontal de foto-->
-                <div class="proyectos__container proyectos__container--hor">
-                    <div class="proyectos__foto proyectos__foto--hor">
-                        <h1 class="proyectos__tittle">INTERIORES</h1>
-                        <a href="proyectoBedroom.html"><img class="proyectos__imgPrincipal proyectos__imgPrincipal--hor"
-                                src="assets/bedroom1.webp" alt=""></a>
-                    </div>
-                    <div class="proyectos__info proyectos__info--hor">
-                        <h3>TOMASELLA</h3>
-                        <p>Este es un proyecto para el dise;o de interiores de una habitacion de hotel.Este es un
-                            proyecto para el dise;o de interiores de una habitacion de hotel</p>
-                        <a href="">ver mas</a>
-                    </div>
-                </div>
-                <!--Proyectos con formato vertical de foto-->
-                <div class="proyectos__container proyectos__container--ver">
-                    <div class="proyectos__foto proyectos__foto--ver">
-                        <a href="proyectoBedroom.html"><img class="proyectos__imgPrincipal proyectos__imgPrincipal--ver"
-                                src="assets/IberostarPlayaAlameda1.webp" alt=""></a>
-                    </div>
-                    <div class="proyectos__info proyectos__info--ver">
-                        <h3>IBEROSTAR PLAYA ALAMEDA</h3>
-                        <p>Este es un proyecto para el dise;o de interiores de una habitacion de hotel.Este es un
-                            proyecto
-                            para el dise;o de interiores de una habitacion de hotel</p>
-                        <a href="">ver mas</a>
+            <i class="fa-solid fa-angle-left slider__button slider__button--prev"></i>
+            <i class="fa-solid fa-angle-right slider__button slider__button--next"></i>
+        </div>
+    </section>
+    <section>
+        <div class="proyectos">
+            <!--Proyectos con formato horizontal de foto-->
+            <div class="proyectos__container">
+                <div class="proyectos__foto">
+                    <h1 class="proyectos__tittle">INTERIORES</h1>
+                    <div class="proyectos__img">
+                        <a href="proyecto.html?id=proyecto1" class="project project--link" data-id="proyecto1"><img
+                                class="proyectos__imgPrincipal proyectos__imgPrincipal--hor" src="assets/bedroom1.webp"
+                                alt=""></a>
+                        
                     </div>
                 </div>
-
-
-                <div class="proyectos__container proyectos__container--hor">
-                    <div class="proyectos__foto proyectos__foto--hor">
-                        <a href="proyectoBedroom.html"><img class="proyectos__imgPrincipal proyectos__imgPrincipal--hor"
-                                src="assets/bedroom1.webp" alt=""></a>
-                    </div>
-                    <div class="proyectos__info proyectos__info--hor">
-                        <h3>TOMASELLA</h3>
-                        <p>Este es un proyecto para el dise;o de interiores de una habitacion de hotel.Este es un
-                            proyecto para el dise;o de interiores de una habitacion de hotel</p>
-                        <a href="">ver mas</a>
-                    </div>
+                <div class="proyectos__info">
+                    <h3>TOMASELLA</h3>
+                    <p>Este es un proyecto para el dise;o de interiores de una habitacion de hotel.Este es un
+                        proyecto para el dise;o de interiores de una habitacion de hotel</p>
+                    <a href="proyecto.html?id=proyecto1" class="proyectos__link" data-id="proyecto1">ver mas</a>
                 </div>
-
             </div>
-        </section>
-    </main>
 
+            <div class="proyectos__container proyectos__container--iz">
+                <div class="proyectos__foto proyectos__foto--iz">
+                    <a href="proyecto.html?id=proyecto1" class="project project--link" data-id="proyecto2"><img
+                            class="proyectos__imgPrincipal proyectos__imgPrincipal--hor" src="assets/bedroom1.webp"
+                            alt=""></a>
+                </div>
+                <div class="proyectos__info proyectos__info--iz">
+                    <h3>TOMASELLA</h3>
+                    <p>Este es un proyecto para el dise;o de interiores de una habitacion de hotel.Este es un
+                        proyecto para el dise;o de interiores de una habitacion de hotel</p>
+                    <a href="proyecto.html?id=proyecto1" class="project project--link" data-id="proyecto2">ver mas</a>
+                </div>
+            </div>
+            <div class="proyectos__container proyectos__container--hor">
+                <div class="proyectos__foto proyectos__foto--hor">
+                    <h1 class="proyectos__tittle">INTERIORES</h1>
+                    <a href="proyecto.html?id=proyecto1" class="project project--link" data-id="proyecto1"><img
+                            class="proyectos__imgPrincipal proyectos__imgPrincipal--hor" src="assets/bedroom1.webp"
+                            alt=""></a>
+                </div>
+                <div class="proyectos__info proyectos__info--hor">
+                    <h3>TOMASELLA</h3>
+                    <p>Este es un proyecto para el dise;o de interiores de una habitacion de hotel.Este es un
+                        proyecto para el dise;o de interiores de una habitacion de hotel</p>
+                    <a href="proyecto.html?id=proyecto1" class="project project--link" data-id="proyecto1">ver mas</a>
+                </div>
+            </div>
+
+            <div class="proyectos__container proyectos__container--hor">
+                <div class="proyectos__foto proyectos__foto--hor">
+                    <a href="proyectoBedroom.html"><img class="proyectos__imgPrincipal proyectos__imgPrincipal--hor"
+                            src="assets/bedroom1.webp" alt=""></a>
+                </div>
+                <div class="proyectos__info proyectos__info--hor">
+                    <h3>TOMASELLA</h3>
+                    <p>Este es un proyecto para el dise;o de interiores de una habitacion de hotel.Este es un
+                        proyecto para el dise;o de interiores de una habitacion de hotel</p>
+                    <a href="">ver mas</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <div class="portfolio__container">
+        <a href="proyecto.html?id=proyecto1" class="project project--link" data-id="proyecto1">
+            <img src="proyecto1.jpg" alt="Proyecto 1" class="project__image">
+            <h2 class="project__title">Proyecto 1</h2>
+        </a>
+        <a href="proyecto.html?id=proyecto2" class="project project--link" data-id="proyecto2">
+            <img src="proyecto2.jpg" alt="Proyecto 2" class="project__image">
+            <h2 class="project__title">Proyecto 2</h2>
+        </a>
+        <!-- Agrega más proyectos aquí -->
+    </div>
     <script src="js/scripts.js"></script>
 </body>
 
