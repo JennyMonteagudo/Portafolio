@@ -1,72 +1,64 @@
 
-    //Menu desplegable mobile
-    const nav= document.querySelector(".navbar__menu");
-    const abrir= document.querySelector("#abrir");
-    const cerrar= document.querySelector("#cerrar");
 
-    abrir.addEventListener("click", () =>{
-        nav.classList.add("visible");
-    })
+//MENU DESPLEGABLE MOBILE//
 
-    cerrar.addEventListener("click", () =>{
-        nav.classList.remove("visible");
-    })
+//cree las variables en las que selecciono los elementos del menú a utilizar
+const nav = document.querySelector(".navbar__menu");
+const abrir = document.querySelector("#abrir");
+const cerrar = document.querySelector("#cerrar");
 
-    // carrusel de habilidades
-    document.addEventListener('DOMContentLoaded', function() {
-        const track = document.querySelector('.carousel__track');
-        const prevButton = document.getElementById('prevButton');
-        const nextButton = document.getElementById('nextButton');
-        const cards = document.querySelectorAll('.carousel__card');
-        const cardWidth = cards[0].offsetWidth;
-        let currentIndex = 0;
+//Creo un evento para el icono de menu desplegable, de modo que al hacerle click se agrega la clase visible que lo muestra.
+abrir.addEventListener("click", () => {
+    nav.classList.add("visible");
+})
 
-        function moveToCard(index) {
-            track.style.transform = 'translateX(' + (-index * cardWidth) + 'px)';
-        }
+//Creo un evento para el icono de cerrar, de modo que al hacerle click se quita la clase visible y se oculta el menú desplegable.
+cerrar.addEventListener("click", () => {
+    nav.classList.remove("visible");
+})
 
-        nextButton.addEventListener('click', function() {
-            currentIndex = (currentIndex + 1) % cards.length;
-            moveToCard(currentIndex);
-        });
+//TRANSICIÓN SUAVE a servicios
 
-        prevButton.addEventListener('click', function() {
-            currentIndex = (currentIndex - 1 + cards.length) % cards.length;
-            moveToCard(currentIndex);
-        });
+document.addEventListener('DOMContentLoaded', () => {
+    // Selecciona todos los enlaces que apuntan a una sección específica de la página.
+    const links = document.querySelectorAll('a[href^="index.html#"]');
 
-        window.addEventListener('resize', function() {
-            moveToCard(currentIndex);
-        });
-    });
+    // Añade un evento 'click' a cada uno de los enlaces.
+    links.forEach(link => {
+        link.addEventListener('click', (event) => {
+            // Previene el comportamiento por defecto del enlace.
+            event.preventDefault();
 
-    // Navegación suave al hacer clic en los enlaces del menú
-    const navbarLinks = document.querySelectorAll('.header__menu-item a');
+            // Obtiene el ID de la sección destino desde el atributo 'href' del enlace.
+            const targetId = link.getAttribute('href').split('#')[1];
 
-    navbarLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = e.target.getAttribute('href').substring(1);
+            // Selecciona la sección destino usando el ID obtenido.
             const targetSection = document.getElementById(targetId);
-            targetSection.scrollIntoView({ behavior: 'smooth' });
+
+            // Desplaza suavemente la página hasta la sección destino.
+            targetSection.scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
+});
 
+//ACORDEON DE SERVICIOS//
 
-// Acordeon de servicios
-//
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
+    // selecciona los headers y los contenidos del acordeon
     var headers = document.querySelectorAll('.accordion__header');
     var contents = document.querySelectorAll('.accordion__content');
-    
-    headers.forEach(function(header, index) {
-        header.addEventListener('click', function() {
-            // Primero, cerrar todos los contenidos
-            contents.forEach(function(content) {
+
+    //pasa por cada header y aplica la función al hacer click.
+    headers.forEach(function (header, index) {
+        header.addEventListener('click', function () {
+            // Primero, cerramos todos los contenidos con un display none.
+            contents.forEach(function (content) {
                 content.style.display = 'none';
             });
 
-            // Luego, abrir el contenido correspondiente al índice clicado
+            // Luego, abrimos el contenido correspondiente al índice al que se le hizo click.
             var content = header.nextElementSibling;
             content.style.display = 'block';
         });
@@ -74,61 +66,45 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    var tabs = document.querySelectorAll('.tab');
-    var contents = document.querySelectorAll('.tab-content');
-
-    function activateTab(tab) {
-        // Quitar la clase active de todas las pestañas y contenidos
-        document.querySelector('.tab.active')?.classList.remove('active');
-        document.querySelector('.tab-content.active')?.classList.remove('active');
-
-        // Añadir la clase active a la pestaña y contenido seleccionados
-        tab.classList.add('active');
-        var tabId = tab.getAttribute('data-tab');
-        document.getElementById('tab-content-' + tabId).classList.add('active');
-    }
-
-    tabs.forEach(function(tab) {
-        tab.addEventListener('click', function() {
-            activateTab(tab);
-        });
-    });
-});
-
-
-
-//-------------------------------------//
-//-------------PORTAFOLIO-------------//
-//------------------------------------//
-
+//PORTAFOLIO  ¡SLIDER!//
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Selecciona el contenedor del slider, los botones de anterior y siguiente y todas lasimagenes, .
     const track = document.querySelector('.slider__container');
     const prevButton = document.querySelector('.slider__button--prev');
     const nextButton = document.querySelector('.slider__button--next');
     const images = document.querySelectorAll('.slider__image');
+    // Dice cuantas imagenes tiene
     const imageCount = images.length;
+    // Inicia en el índice de la imagen actual.
     let currentIndex = 0;
+    // Declaro una variable para la reproducción automática.
     let interval;
 
+    // Creo una función para mover el slider a la imagen especificada por el índice y transformo el contenedor para desplazarlo horizontalmente.
     function moveToImage(index) {
         track.style.transform = 'translateX(' + (-index * 100) + '%)';
     }
 
+    // Se crea una función para la reproducción automática.
     function autoPlay() {
+        // Incrementa el índice actual y no se pasa del indice de la cantidad de imagenes
         currentIndex = (currentIndex + 1) % imageCount;
+        // Mueve el slider a la imagen correspondiente al índice actual.
         moveToImage(currentIndex);
     }
 
+    // Configura un intervalo que llama a la función autoPlay cada 3 segundos
     function startAutoPlay() {
         interval = setInterval(autoPlay, 3000);
     }
 
+    // se vacía el intervalo para detener el autoplay
     function stopAutoPlay() {
         clearInterval(interval);
     }
 
+    // Al hacer click en siguiente detiene la reproducción automática y mueve el slider a la siguiente imagen. al final vuelve a empezar a reroducirse
     nextButton.addEventListener('click', function() {
         stopAutoPlay();
         currentIndex = (currentIndex + 1) % imageCount;
@@ -136,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         startAutoPlay();
     });
 
+    // Hace los mismo que el evento de siguiente pero con el botón de anterior
     prevButton.addEventListener('click', function() {
         stopAutoPlay();
         currentIndex = (currentIndex - 1 + imageCount) % imageCount;
@@ -143,82 +120,39 @@ document.addEventListener('DOMContentLoaded', function() {
         startAutoPlay();
     });
 
+    // Añade un evento 'resize' a la ventana del navegador y ajusta la posición del slider por si camnia el tamaño de la ventana.
     window.addEventListener('resize', function() {
         moveToImage(currentIndex);
     });
 
+    // Inicia la reproducción automática del slider.
     startAutoPlay();
 });
 
 
-//Proyectos//
-// js/scripts.js
-document.addEventListener('DOMContentLoaded', () => {
-    const params = new URLSearchParams(window.location.search);
-    const projectId = params.get('id');
-    
-    const projectsData = {
-        "proyecto1": {
-            title: "Título del Proyecto 1",
-            subtitle: "Subtítulo del Proyecto 1",
-            description: "Descripción detallada del Proyecto 1.",
-            images: ["img1.jpg", "img2.jpg", "img3.jpg"],
-            tools: ["icon1.png", "icon2.png", "icon3.png", "icon4.png", "icon5.png"]
-        },
-        "proyecto2": {
-            title: "Título del Proyecto 2",
-            subtitle: "Subtítulo del Proyecto 2",
-            description: "Descripción detallada del Proyecto 2.",
-            images: ["img4.jpg", "img5.jpg", "img6.jpg"],
-            tools: ["icon6.png", "icon7.png", "icon8.png", "icon9.png", "icon10.png"]
-        }
-        // Agrega más proyectos aquí
-    };
 
-    if (projectId) {
-        const projectData = projectsData[projectId];
-        
-        if (projectData) {
-            document.getElementById('project-title').textContent = projectData.title;
-            document.getElementById('project-subtitle').textContent = projectData.subtitle;
-            document.getElementById('project-description').textContent = projectData.description;
+//SOBRE MI//
 
-            const imagesContainer = document.getElementById('project-images');
-            projectData.images.forEach(image => {
-                const imgElement = document.createElement('img');
-                imgElement.src = image;
-                imgElement.classList.add('project__image');
-                imagesContainer.appendChild(imgElement);
-            });
+//SECCION HABILIDADES ¡PARALLAX!
 
-            const toolsContainer = document.getElementById('project-tools');
-            projectData.tools.forEach(tool => {
-                const imgElement = document.createElement('img');
-                imgElement.src = tool;
-                imgElement.classList.add('project__tool');
-                toolsContainer.appendChild(imgElement);
-            });
-        }
-    }
-});
-
-
-//SOBRE MI
-
-//seccion habilidades
-//Se detecta el scrolling para aplicar la animacion de las habilidades
-
-window.onscroll = function(){
+//Se detecta el scroll de la ventana para aplicar la animación de la barra de las habilidades.
+window.onscroll = function () {
     efectoHabilidades()
 };
 
-//funcion que aplica la animacion de la barra de habilidades
-function efectoHabilidades(){
+//esta funciónn aplica la animación de la barra de habilidades.
+function efectoHabilidades() {
+    //se crean las variables a partir de tomar su id.
     var skills = document.getElementById("skills");
+    //esta variable relaciona la altura de la pantalla y el la altura del div de las habilidades.
     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >=300){
-        document.getElementById("html").classList.add("skills__barra--html");
+    //cuendo la distancia entre la parte superior de la pantalla y el contenido sea mayor o igual que 300px se va a agregar la clase a los contenedores que fueron tomados con la id. esta clase tiene asignada una transición en los estilos para pasar de un unto a otro del inicio al final.
+    if (distancia_skills >= 300) {
+        document.getElementById("sk").classList.add("skills__barra--sk");
         document.getElementById("ai").classList.add("skills__barra--ai");
         document.getElementById("max").classList.add("skills__barra--max");
+        document.getElementById("blender").classList.add("skills__barra--blender");
+        document.getElementById("ps").classList.add("skills__barra--ps");
+        document.getElementById("figma").classList.add("skills__barra--figma");
     }
 }

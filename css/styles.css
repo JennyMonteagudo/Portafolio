@@ -184,8 +184,11 @@ section {
     padding-top: 3rem;
 }
 .contactrrss__a {
-    color: rgb(26, 26, 26);
+    color: rgb(255, 255, 255);
     font-size: 2rem;
+}
+.contactrrss__a:hover {
+    color: #f1953e;
 }
 
 /*Adaptabilidad del header y el footer*/
@@ -445,6 +448,9 @@ section {
         left: -80px;
         font-size: 3em;
     }
+    .presentation__image{
+        height: 600px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -461,6 +467,9 @@ section {
     }
     .presentation__description {
         max-width: 60vw;
+    }
+    .presentation__image{
+        height: 700px;
     }
 
 }
@@ -600,7 +609,7 @@ section {
         max-width: 100%;
     }
     .slider {
-        height: 500px;
+        height: 700px;
     }
     .slider__image {
         width: 100%;
@@ -654,75 +663,6 @@ section {
     .proyectos__info{
         width: 400px;
         padding: 2rem;
-    }
-}
-
-/* ----------------------------*/
-/* ------CONTACTO -----------*/
-/* ----------------------------*/
-/* Estilos del formulario de contacto */
-.contact {
-    background-color: #333;
-    height: 100vh;
-}
-
-.contact__container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    background-color: #333;
-    padding: 3rem;
-    padding-top: 8rem;
-    height: 100vh;
-    color: white;
-}
-
-.contact__form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact__label {
-    margin-top: 1rem;
-}
-
-.contact__input,
-.contact__textarea {
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-}
-
-.contact__button {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    background: #e7bb92;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-.contact__button:hover {
-    background: #f1953e;
-    color: white;
-}
-
-.contactrrss {
-    display: flex;
-    gap: 2rem;
-    text-align: center;
-    padding-top: 3rem;
-}
-
-.contactrrss__a {
-    color: white;
-    font-size: 2rem;
-}
-
-@media (min-width: 600px) {
-    .contact__container {
-        max-width: 600px;
-        margin: 0 auto;
     }
 }
 
@@ -792,6 +732,13 @@ section {
     max-width: 80%;
     border-radius: 5px;
 }
+.project__subtitle{
+    font-size: 2rem;
+}
+.project__h3{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
 
 @media (min-width: 768px) {
     .project__details {
@@ -854,34 +801,29 @@ section {
 /*seccion sobre mi*/
 .about {
     padding: 20px;
-    margin-top: 70px;
+    margin: 4rem auto;
 }
-
 .about__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-
 .about__info {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
 }
-
 .about__list {
     list-style: none;
     padding: 0;
 }
-
 .about__list li {
     margin: 10px 0;
 }
-
 .about__photo-container {
     display: flex;
     justify-content: center;
 }
-
 .about__img {
     width: 100%;
     height: 100%;
@@ -889,7 +831,231 @@ section {
     object-fit: cover;
 }
 
+/*seccion Curriculum*/
+.curriculum__container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 4rem 2rem;
+}
+.curriculum__tittle {
+    padding-bottom: 3rem;
+}
+.curriculum__subtittle {
+    padding-bottom: 1rem;
+}
+.curriculum__fila {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+}
+.educacioncard__izq,
+.educacioncard__der {
+    background-color: #fbeee3;
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    padding: 2rem;
+}
+.curriculum__izq {
+    border-right: 2px solid #f58721;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.curriculum__der {
+    border-left: 2px solid #f58721;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.universidad {
+    color: #f58721;
+    font-size: 1rem;
+    font-weight: bold;
+    display: block;
+}
+.fecha,
+.pais {
+    color: #f58721;
+}
+.educacioncard__izq {
+    border-right: 3px solid #f58721;
+}
+.educacioncard__der {
+    border-left: 3px solid #f58721;
+}
+.conectori {
+    height: 2px;
+    background-color: #f1953e;
+    width: 1rem;
+    position: absolute;
+    top: 50%;
+    right: -1rem;
+    z-index: 1;
+}
+.circuloi {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #f1953e;
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.conectord {
+    height: 2px;
+    background-color: #f1953e;
+    width: 1rem;
+    position: absolute;
+    top: 50%;
+    left: -1rem;
+    z-index: 1;
+}
+.circulod {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #f1953e;
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+
+/*seccion Habilidades*/
+.skills {
+    width: 100%;
+    background-color: #fbeee3;
+}
+.skills__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+.skills__tittle {
+    font-size: 3rem;
+}
+.skills__info {
+    display: flex;
+    justify-content: space-between;
+}
+.skills__barra {
+    background-color: #c0c0c0;
+    width: 100%;
+    height: 10px;
+    margin: 10px 0;
+}
+.skills__lista,
+.skills__porcentaje{
+    font-size: 2rem;
+}
+
+/*este estilo se aplicar[a luegocon java script*/
+.skills__barra--sk {
+    background-color: #f1953e;
+    width: 92%;
+    height: 10px;
+    animation: sk 2s forwards;
+}
+.skills__barra--max {
+    background-color: #f1953e;
+    width: 86%;
+    height: 10px;
+    animation: max 2s forwards;
+}
+.skills__barra--blender{
+    background-color: #f1953e;
+    width: 90%;
+    height: 10px;
+    animation: blender 2s forwards;
+}
+.skills__barra--ai {
+    background-color: #f1953e;
+    width: 96%;
+    height: 10px;
+    animation: ai 2s forwards;
+}
+.skills__barra--ps {
+    background-color: #f1953e;
+    width: 96%;
+    height: 10px;
+    animation: ps 2s forwards;
+}
+.skills__barra--figma {
+    background-color: #f1953e;
+    width: 96%;
+    height: 10px;
+    animation: figma 2s forwards;
+}
+
+/*creo las animaciones de las barras*/
+@keyframes sk {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 92%;
+    }
+}
+@keyframes max {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 86%;
+    }
+}
+@keyframes blender {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 90%;
+    }
+}
+@keyframes ai {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 96%;
+    }
+}
+@keyframes ps {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 70%;
+    }
+}
+@keyframes figma {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 92%;
+    }
+}
+
+
 @media (min-width: 768px) {
+    .curriculum__fila {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    .curriculum__der,
+    .curriculum__izq {
+        max-width: 50vw;
+    }
     .about__container {
         flex-direction: row;
         justify-content: space-between;
@@ -907,129 +1073,6 @@ section {
     }
 }
 
-/*seccion Curriculum*/
-.curriculum__container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 4rem 2rem;
-}
-
-.curriculum__tittle {
-    padding-bottom: 3rem;
-}
-
-.curriculum__subtittle {
-    padding-bottom: 1rem;
-}
-
-.curriculum__fila {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    justify-content: center;
-}
-
-.educacioncard__izq,
-.educacioncard__der {
-    background-color: #fbeee3;
-    position: relative;
-    margin-bottom: 2rem;
-    border-radius: 5px;
-    padding: 2rem;
-}
-
-.curriculum__izq {
-    border-right: 2px solid #f58721;
-    padding-right: 1rem;
-    display: flex;
-    flex-direction: column;
-
-}
-
-.curriculum__der {
-    border-left: 2px solid #f58721;
-    padding-left: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.universidad {
-    color: #f58721;
-    font-size: 1rem;
-    font-weight: bold;
-    display: block;
-}
-
-.fecha,
-.pais {
-    color: #f58721;
-}
-
-.educacioncard__izq {
-    border-right: 3px solid #f58721;
-}
-
-.educacioncard__der {
-    border-left: 3px solid #f58721;
-}
-
-.conectori {
-    height: 2px;
-    background-color: #f1953e;
-    width: 1rem;
-    position: absolute;
-    top: 50%;
-    right: -1rem;
-    z-index: 1;
-}
-
-.circuloi {
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #f1953e;
-    float: right;
-    position: relative;
-    bottom: 4px;
-}
-
-.conectord {
-    height: 2px;
-    background-color: #f1953e;
-    width: 1rem;
-    position: absolute;
-    top: 50%;
-    left: -1rem;
-    z-index: 1;
-}
-
-.circulod {
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: #f1953e;
-    float: left;
-    position: relative;
-    bottom: 4px;
-}
-
-@media (min-width: 768px) {
-    .curriculum__fila {
-        display: flex;
-        flex-direction: row;
-        padding: 0;
-    }
-
-    .curriculum__der,
-    .curriculum__izq {
-        max-width: 50vw;
-    }
-}
-
 @media (min-width: 1024px) {
 
     .curriculum__der,
@@ -1038,85 +1081,68 @@ section {
     }
 }
 
-/*seccion Habilidades*/
-.skills {
-    width: 100%;
+/* ----------------------------*/
+/* ------CONTACTO -----------*/
+/* ----------------------------*/
+/* Estilos del formulario de contacto */
+.contact {
     background-color: #fbeee3;
+    height: 100vh;
+    width: 100vw;
 }
-
-.skills__container {
+.contact__container {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 2rem 2rem;
-    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding: 3rem;
+    padding-top: 8rem;
+    height: 100vh;
+    color: rgb(0, 0, 0);
 }
-
-.skills__tittle {
-    font-size: 3rem;
-}
-
-.skills__info {
+.contact__form {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
-
-.skills__barra {
-    background-color: #c0c0c0;
-    width: 100%;
-    height: 6px;
-    margin: 10px 0;
+.contact__label {
+    margin-top: 1rem;
 }
-
-/*este estilo se aplicar[a luegocon java script*/
-.skills__barra--html {
-    background-color: #f1953e;
-    width: 88%;
-    height: 6px;
-    animation: html 2s forwards;
+.contact__input,
+.contact__textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
 }
-
-.skills__barra--max {
-    background-color: #f1953e;
-    width: 90%;
-    height: 6px;
-    animation: max 2s forwards;
+.contact__button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: #f1953e;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
-
-.skills__barra--ai {
-    background-color: #f1953e;
-    width: 96%;
-    height: 6px;
-    animation: ai 2s forwards;
+.contact__button:hover {
+    background: #333;
+    color: white;
 }
-
-/*creo las animaciones de las barras*/
-@keyframes html {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 88%;
+.contactrrss {
+    display: flex;
+    gap: 2rem;
+    text-align: center;
+    padding-top: 3rem;
+}
+.contactrrss__a--section{
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+}
+@media (min-width: 600px) {
+    .contact__container {
+        max-width: 600px;
+        margin: 0 auto;
     }
 }
-
-@keyframes max {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 90%;
-    }
-}
-
-@keyframes ai {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 96%;
+@media (min-width: 1024px) {
+    .contact{
+        max-width: 100vw;
+        margin: 0 auto;
     }
 }
