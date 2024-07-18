@@ -15,8 +15,7 @@
     <header class="header">
         <nav class="navbar">
             <!-- Logo para la navegación a Home -->
-            <a href="index.html" class="navbar__logo"><img
-                    src="assets/Identidad y Vectores_Mesa de trabajo 1 copia 5.png" alt="Home Icon"></a>
+            <a href="index.html" class="navbar__logo"><p class="navbar__jenny">JENNY</p></a>
             <i id="abrir" class="fa-solid fa-bars navbar__abrir"></i>
             <!-- Menú de navegación -->
             <ul class="navbar__menu">
@@ -36,9 +35,7 @@
             <h1 id="project-title" class="project__title"></h1>
             <h2 id="project-subtitle" class="project__subtitle"></h2>
             <p id="project-description" class="project__description"></p>
-            <ul id="project-tools" class="project__tools">
-                <!-- Los iconos de herramientas se agregarán aquí -->
-            </ul>
+            
             <h3>Herramientas:</h3>
             <p id="project-skills" class="project__skills">
                 <!-- Las habilidades con iconos se agregarán aquí -->
@@ -51,36 +48,32 @@
     </div>
 
     <footer class="footer">
-        <section class="footerContact">
-            <div class="footerContact__container">
-                <h2 class="footerContact__title">Contactame</h2>
-                <p>Te puedo ayudar a materializar tus ideas.</p>
-                <form class="footerContact__form">
-                    <div class="footerForm">
-                        <div class="footerContact__unidad">
-                            <label for="name" class="footerContact__label">Nombre:</label>
-                            <input type="text" id="name" name="name" class="footerContact__input">
-                        </div>
-                        <div class="footerContact__unidad">
-                            <label for="email" class="footerContact__label">Email:</label>
-                            <input type="email" id="email" name="email" class="footerContact__input">
-                        </div>
-                        <div class="footerContact__unidad">
-                            <label for="message" class="footerContact__label">Mensaje:</label>
-                            <textarea id="message" name="message" class="footerContact__textarea"></textarea>
-                        </div>
+        <div class="footerContact__container">
+            <h2 class="footerContact__title">Contáctame</h2>
+            <p>Te puedo ayudar a materializar tus ideas.</p>
+            <form class="footerContact__form">
+                <div class="footerForm">
+                    <div class="footerContact__unidad">
+                        <label for="name" class="footerContact__label">Nombre:</label>
+                        <input type="text" id="name" name="name" class="footerContact__input">
                     </div>
-                    <button type="submit" class="footerContact__button">Enviar</button>
-                </form>
-                <div class="contactrrss">
-                    <a class="contactrrss__a" href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a class="contactrrss__a" href=""><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a class="contactrrss__a" href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    <div class="footerContact__unidad">
+                        <label for="email" class="footerContact__label">Email:</label>
+                        <input type="email" id="email" name="email" class="footerContact__input">
+                    </div>
+                    <div class="footerContact__unidad">
+                        <label for="message" class="footerContact__label">Mensaje:</label>
+                        <textarea id="message" name="message" class="footerContact__textarea"></textarea>
+                    </div>
                 </div>
+                <button type="submit" class="footerContact__button">Enviar</button>
+            </form>
+            <div class="contactrrss">
+                <a class="contactrrss__a" href=""><i class="fa-brands fa-instagram"></i></a>
+                <a class="contactrrss__a" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                <a class="contactrrss__a" href=""><i class="fa-brands fa-whatsapp"></i></a>
             </div>
-        </section>
-
-
+        </div>
     </footer>
     <script src="js/templatescript.js"></script>
 </body>

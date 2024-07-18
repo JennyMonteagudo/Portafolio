@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Esta página web constituye un portafolio de proyectos de diseño de interiores y diseño de identidad visual">
+    <meta name="keywords"
+        content="diseño, Cuba, interiores, portafolio, branding, diseñador, la Habana, identidad visual, marca">
     <title>Portafolio Web</title>
-    <!-- Importación de fuentes y Font Awesome -->
     <link rel="stylesheet" href="css/styles.css">
+    <!-- Importación de Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -22,7 +26,7 @@
                 <i id="cerrar" class="fa-solid fa-xmark navbar__cerrar"></i>
                 <li class="navbar__item"><a href="sobremi.html" class="navbar__link">Sobre Mí</a></li>
                 <li class="navbar__item"><a href="portafolio.html" class="navbar__link">Portafolio</a></li>
-                <li class="navbar__item"><a href="servicios.html" class="navbar__link">Servicios</a></li>
+                <li class="navbar__item"><a href="https://jennymonteagudo.github.io/Portafolio/#servicios" class="navbar__link">Servicios</a></li>
                 <li class="navbar__item"><a href="contacto.html" class="navbar__link">Contacto</a></li>
             </ul>
         </nav>
@@ -44,127 +48,147 @@
                         freelance.</p>
                 </div>
             </div>
-
-            <!-- Sección de galeria de proyectos -->
-            <section class="gallery">
-                <h2 class="gallery__tittle">Proyectos Destacados</h2>
-                <div class="gallery__grid">
-                    <div class="gallery__container">
-                        <a href="project.html?project=proyecto1"><img class="gallery__img" title="imagen1"
-                                src="assets/IberostarPlayaAlameda4.webp" alt="">
-                            <h3 class="gallery__name">imagen 1</h3>
-                        </a>
-                    </div>
-                    <div class="gallery__container">
-                        <a href="project1.html"><img class="gallery__img " title="imagen1"
-                                src="assets/blankpresentacion.jpg" alt="">
-                            <h3 class="gallery__name">imagen 2</h3>
-                        </a>
-                    </div>
-                    <div class="gallery__container">
-                        <a href="project1.html"><img class="gallery__img " title="imagen1"
-                                src="assets/BalanceBike1.webp" alt="">
-                            <h3 class="gallery__name">imagen 3</h3>
-                        </a>
-                    </div>
-                    <div class="gallery__container">
-                        <a href="project1.html"><img class="gallery__img gallery__img--vdoble" title="imagen1"
-                                src="imgs/pexels-zydeaosika-3987613.jpg" alt="">
-                            <h3 class="gallery__name">imagen 4</h3>
-                        </a>
-                    </div>
-                    <div class="gallery__container">
-                        <a href="project1.html"><img class="gallery__img " title="imagen1"
-                                src="imgs/pexels-vasanth-babu-150247-797793.jpg" alt="">
-                            <h3 class="gallery__name">imagen 3</h3>
-                        </a>
-                    </div>
-                    <div class="gallery__container">
-                        <a href="project1.html"><img class="gallery__img gallery__img--vdoble" title="imagen1"
-                                src="assets/bedroom2.webp" alt="">
-                            <h3 class="gallery__name">imagen 4</h3>
-                        </a>
-                    </div>
+        </section>
+        <!-- Sección de galeria de proyectos -->
+        <section class="gallery">
+            <h2 class="gallery__tittle">Proyectos Destacados</h2>
+            <div class="gallery__grid">
+                <div class="gallery__container">
+                    <a href="project.html?project=proyecto1">
+                        <img class="gallery__img" title="playaAlameda" src="assets/IberostarPlayaAlameda4.webp"
+                            loading="lazy"
+                            alt="imagen principal del proyecto de interiores del Hotel Iberostar Playa Alameda">
+                    </a>
                 </div>
-                <a class="gallery__enlace" href="portafolio.html">Ver el portafolio <i
-                        class="fa-solid fa-caret-right"></i></a>
-            </section>
+                <div class="gallery__container">
+                    <a href="project.html?project=proyecto2">
+                        <img class="gallery__img" title="fressco" src="assets/fressco1.webp" loading="lazy"
+                            alt="imagen principal del proyecto Fressco">
+                    </a>
+                </div>
+                <div class="gallery__container">
+                    <a href="project.html?project=proyecto3">
+                        <img class="gallery__img" title="playaAlameda" src="assets/Agile1.webp" loading="lazy"
+                            alt="imagen principal del proyecto Agile">
+                    </a>
+                </div>
+                <div class="gallery__container">
+                    <a href="project.html?project=proyecto4">
+                        <img class="gallery__img" title="playaAlameda" src="assets/cacharro1.webp" loading="lazy"
+                            alt="imagen principal del proyecto de branding Cacharro">
+                    </a>
+                </div>
+                <div class="gallery__container">
+                    <a href="project.html?project=proyecto5">
+                        <img class="gallery__img" title="playaAlameda" src="assets/HotelComodoro2.webp" loading="lazy"
+                            alt="imagen principal del proyecto de interiores del Hotel Comodoro">
+                    </a>
+                </div>
+                <div class="gallery__container">
+                    <a href="project.html?project=proyecto6">
+                        <img class="gallery__img" title="playaAlameda" src="assets/bedroom2.webp" loading="lazy" alt="imagen principal del proyecto de interiores para e concurso Tomasella">
+                    </a>
+                </div>
+            </div>
+            <a class="gallery__enlace" href="portafolio.html">Ver el portafolio <i
+                    class="fa-solid fa-caret-right"></i></a>
+        </section>
 
-            <!-- Sección de servicios -->
-            <section class="servicioshome">
-                <div class="servicioshome__container">
-                    <h2 class="servicioshome__tittle">SERVICIOS</h2>
+        <!-- Sección de servicios -->
+        <section class="servicioshome" id="servicios">
+            <div class="servicioshome__container">
+                <h2 class="servicioshome__tittle">SERVICIOS</h2>
+
+            </div>
+            <div class="accordion">
+                <div class="accordion__item">
+                    <div class="accordion__header">
+                        <p>Diseño de interiores</p><i class="fa-solid fa-circle-chevron-down"></i>
+                    </div>
+                    <div class="accordion__content">
+                        <p>Puedo transformar tus espacios en ambientes únicos y funcionales que reflejan la personalidad
+                            y necesidades de mis clientes. Con una sólida formación en diseño de interiores y
+                            mobiliario, ofrezco soluciones innovadoras y a medida para cada proyecto.</p>
+                        <h4 class="acordion__h4">Servicios que ofrezco:</h4>
+                        <ul class="acordion__servicios">
+                            <li>Diseño de espacios residenciales y comerciales.</li>
+                            <li>Creación de mobiliario personalizado.</li>
+                            <li>Asesoramiento en la selección de materiales y acabados.</li>
+                            <li>Planificación y optimización del espacio.</li>
+                            <li>Supervisión de proyectos y gestión de obra.</li>
+
+                        </ul>
+                        <h4 class="acordion__h4">Herramientas digitales que manejo:</h4>
+                        <ul class="acordion__herramientas">
+                            <li><strong>AutoCAD:</strong> Para la creación de planos técnicos y detallados.</li>
+                            <li><strong>SketchUp:</strong> Para modelado 3D y visualización de proyectos.</li>
+                            <li><strong>Corona Render:</strong> Para renders fotorrealistas que ayudan a visualizar el
+                                resultado final.</li>
+
+                        </ul>
+                    </div>
 
                 </div>
-                <div class="accordion">
-                    <div class="accordion__item">
-                        <div class="accordion__header">
-                            <p>Diseño Web</p><i class="fa-solid fa-circle-chevron-down"></i>
-                        </div>
-
-                        <div class="accordion__content">
-                            <p>Me encargo del diseño de tu página web. Desde la conceptualización, análisis UI y UX,
-                                hasta la maquetación, ya sea en <strong>WordPess</strong> o <strong>HTML, CSS y
-                                    JS</strong></p><a class="acordeon__a" href="servicios.html">Saber más</a>
-                        </div>
-
+                <div class="accordion__item">
+                    <div class="accordion__header">
+                        <p>Branding</p><i class="fa-solid fa-circle-chevron-down"></i>
                     </div>
-                    <div class="accordion__item">
-                        <div class="accordion__header">
-                            <p>Diseño de interiores</p><i class="fa-solid fa-circle-chevron-down"></i>
-                        </div>
-                        <div class="accordion__content">
-                            <p>¿Necesitas una identidad para tu empresa? Yo me encargo de hacer que tu marca sea única y
-                                reconocible.</p><a class="acordeon__a" href="servicios.html">Saber más</a>
-                        </div>
-                    </div>
-                    <div class="accordion__item">
-                        <div class="accordion__header">
-                            <p>Branding</p><i class="fa-solid fa-circle-chevron-down"></i>
-                        </div>
-                        <div class="accordion__content">
-                            <p>¿Necesitas una identidad para tu empresa? Yo me encargo de hacer que tu marca sea única y
-                                reconocible.</p><a class="acordeon__a" href="servicios.html">Saber más</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                    <div class="accordion__content">
+                        <p>Te ayudo a construir y fortalecer la identidad de tu marca a través de estrategias de
+                            branding creativas y efectivas. Mi objetivo es posicionar tu negocio en el mercado y hacer
+                            que destaque entre la competencia.</p>
+                        <h4 class="acordion__h4">Servicios que ofrezco:</h4>
+                        <ul class="acordion__servicios">
+                            <li>Creación de identidad corporativa (logotipos, paleta de colores, tipografías).</li>
+                            <li>Desarrollo de manuales de marca.</li>
+                            <li>Diseño de materiales promocionales (folletos, tarjetas de visita, banners).</li>
+                            <li>Estrategias de posicionamiento de marca.</li>
+                            <li>Consultoría en rebranding y actualización de imagen.</li>
 
+                        </ul>
+                        <h4 class="acordion__h4">Herramientas digitales que manejo:</h4>
+                        <ul class="acordion__herramientas">
+                            <li><strong>Adobe Illustrator:</strong> Para la creación de logotipos y gráficos
+                                vectoriales.</li>
+                            <li><strong>Adobe Photoshop:</strong> Para la edición y manipulación de imágenes.</li>
+                            <li><strong>Figma:</strong> Para el diseño colaborativo y prototipado de interfaces.</li>
 
-
-    </main>
-    <footer class="footer">
-        <section class="footerContact">
-            <div class="footerContact__container">
-                <h2 class="footerContact__title">Contactame</h2>
-                <p>Te puedo ayudar a materializar tus ideas.</p>
-                <form class="footerContact__form">
-                    <div class="footerForm">
-                        <div class="footerContact__unidad">
-                            <label for="name" class="footerContact__label">Nombre:</label>
-                            <input type="text" id="name" name="name" class="footerContact__input">
-                        </div>
-                        <div class="footerContact__unidad">
-                            <label for="email" class="footerContact__label">Email:</label>
-                            <input type="email" id="email" name="email" class="footerContact__input">
-                        </div>
-                        <div class="footerContact__unidad">
-                            <label for="message" class="footerContact__label">Mensaje:</label>
-                            <textarea id="message" name="message" class="footerContact__textarea"></textarea>
-                        </div>
+                        </ul>
                     </div>
-                    <button type="submit" class="footerContact__button">Enviar</button>
-                </form>
-                <div class="contactrrss">
-                    <a class="contactrrss__a" href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a class="contactrrss__a" href=""><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a class="contactrrss__a" href=""><i class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
         </section>
+    </main>
 
-
+    <footer class="footer">
+        <div class="footerContact__container">
+            <h2 class="footerContact__title">Contáctame</h2>
+            <p>Te puedo ayudar a materializar tus ideas.</p>
+            <form class="footerContact__form">
+                <div class="footerForm">
+                    <div class="footerContact__unidad">
+                        <label for="name" class="footerContact__label">Nombre:</label>
+                        <input type="text" id="name" name="name" class="footerContact__input">
+                    </div>
+                    <div class="footerContact__unidad">
+                        <label for="email" class="footerContact__label">Email:</label>
+                        <input type="email" id="email" name="email" class="footerContact__input">
+                    </div>
+                    <div class="footerContact__unidad">
+                        <label for="message" class="footerContact__label">Mensaje:</label>
+                        <textarea id="message" name="message" class="footerContact__textarea"></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="footerContact__button">Enviar</button>
+            </form>
+            <div class="contactrrss">
+                <a class="contactrrss__a" href=""><i class="fa-brands fa-instagram"></i></a>
+                <a class="contactrrss__a" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                <a class="contactrrss__a" href=""><i class="fa-brands fa-whatsapp"></i></a>
+            </div>
+        </div>
     </footer>
+
     <script src="js/scripts.js"></script>
 </body>
 
