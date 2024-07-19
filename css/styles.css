@@ -57,6 +57,9 @@ h4 {
     font-weight: 900;
     padding-bottom: 1.5rem;
 }
+span{
+    font-size: 1.3rem;
+}
 section {
     margin: 0 auto;
 }
@@ -194,6 +197,8 @@ section {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 .footerContact__button:hover {
     background: var(--background-color);
@@ -413,8 +418,8 @@ section {
     position: absolute;
     transform: rotate(-90deg);
     top: 7rem;
-    left: -110px;
-    font-size: 3em;
+    left: -90px;
+    font-size: 2.5em;
 }
 .servicioshome__container {
     width: 15%;
@@ -507,8 +512,298 @@ section {
         left: -50px;
         font-size: 3em;
     }
+    .presentation__image{
+        max-width: 1500px;
+    }
     
 }
+
+/* ----------------------------*/
+/* ------SOBRE MI-----------*/
+/* ----------------------------*/
+
+
+/*seccion sobre mi*/
+.about {
+    padding: 20px;
+    margin: 4rem auto;
+}
+.about__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.about__info {
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+.about__list {
+    list-style: none;
+    padding: 0;
+}
+.about__list li {
+    margin: 10px 0;
+}
+.about__photo-container {
+    display: flex;
+    justify-content: center;
+}
+.about__img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*seccion Curriculum*/
+.curriculum__container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 4rem 2rem;
+}
+.curriculum__tittle {
+    padding-bottom: 3rem;
+}
+.curriculum__subtittle {
+    padding-bottom: 1rem;
+}
+.curriculum__fila {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+}
+.educacioncard__izq,
+.educacioncard__der {
+    background-color: var(--background-color);
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    padding: 2rem;
+}
+.curriculum__izq {
+    border-right: 2px solid var(--secondary-color);
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+.curriculum__der {
+    border-left: 2px solid var(--secondary-color);
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.universidad {
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: block;
+}
+.fecha,
+.pais {
+    color: var(--secondary-color);
+}
+.educacioncard__izq {
+    border-right: 3px solid var(--secondary-color);
+}
+.educacioncard__der {
+    border-left: 3px solid var(--secondary-color);
+}
+.conectori {
+    height: 2px;
+    background-color: var(--secondary-color);
+    width: 1rem;
+    position: absolute;
+    top: 50%;
+    right: -1rem;
+    z-index: 1;
+}
+.circuloi {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.conectord {
+    height: 2px;
+    background-color: var(--secondary-color);
+    width: 1rem;
+    position: absolute;
+    top: 50%;
+    left: -1rem;
+    z-index: 1;
+}
+.circulod {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+
+/*seccion Habilidades*/
+.skills {
+    width: 100%;
+    background-color: var(--background-color);
+}
+.skills__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+.skills__tittle {
+    font-size: 3rem;
+}
+.skills__info {
+    display: flex;
+    justify-content: space-between;
+}
+.skills__barra {
+    background-color: #c0c0c0;
+    width: 100%;
+    height: 10px;
+    margin: 10px 0;
+}
+.skills__lista,
+.skills__porcentaje{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/*Estos estilos serán aplicados en forma de clases a los contenedores a través de java script*/
+.skills__barra--sk {
+    background-color: var(--secondary-color);
+    width: 92%;
+    height: 10px;
+    animation: sk 2s forwards;
+}
+.skills__barra--max {
+    background-color: var(--secondary-color);
+    width: 86%;
+    height: 10px;
+    animation: max 2s forwards;
+}
+.skills__barra--blender{
+    background-color: var(--secondary-color);
+    width: 90%;
+    height: 10px;
+    animation: blender 2s forwards;
+}
+.skills__barra--ai {
+    background-color: var(--secondary-color);
+    width: 96%;
+    height: 10px;
+    animation: ai 2s forwards;
+}
+.skills__barra--ps {
+    background-color: var(--secondary-color);
+    width: 96%;
+    height: 10px;
+    animation: ps 2s forwards;
+}
+.skills__barra--figma {
+    background-color: var(--secondary-color);
+    width: 96%;
+    height: 10px;
+    animation: figma 2s forwards;
+}
+
+/*creo las animaciones de las barras con los puntos de inicio y fin del recorrido, que luego serán activadas con JS cada uno debe tener el nombre de la animacion correspondiente*/
+@keyframes sk {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 92%;
+    }
+}
+@keyframes max {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 86%;
+    }
+}
+@keyframes blender {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 90%;
+    }
+}
+@keyframes ai {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 96%;
+    }
+}
+@keyframes ps {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 70%;
+    }
+}
+@keyframes figma {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 92%;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .curriculum__fila {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    .curriculum__der,
+    .curriculum__izq {
+        max-width: 50vw;
+    }
+    .about__container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+    .about__info {
+        flex: 1;
+        margin-right: 20px;
+    }
+    .about__photo-container {
+        flex: 1;
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .curriculum__der,
+    .curriculum__izq {
+        max-width: 50%;
+    }
+}
+
 
 /* ----------------------------*/
 /* ------PORTAFOLIO -----------*/
@@ -557,13 +852,14 @@ section {
 .proyectos {
     display: flex;
     flex-direction: column;
-    padding: 150px 0px;
+    padding: 4rem 0px;
 }
 .proyectos__container {
     display: flex;
     flex-direction: column;
     position: relative;
     height: max-content;
+    margin-right: 1rem;
 }
 .proyectos__img {
     width: 100%;
@@ -586,12 +882,16 @@ section {
     align-content: center;
 }
 .proyectos__tittle {
-    font-size: 3.1rem;
+    font-size: 2.9rem;
     position: absolute;
     left: -8.2rem;
-    top: 7rem;
+    top: 8rem;
     transform: rotate(-90deg);
     z-index: 1;
+}
+.proyectos__tittle--branding{
+    left: -7rem;
+    top: 7rem;
 }
 .proyectos__info {
     color: var(--background-colordark);
@@ -622,12 +922,17 @@ section {
     .proyectos__tittle {
         font-size: 4rem;
         top: 15rem;
+        left: -13rem;
+    }
+    .proyectos__tittle--branding{
         left: -11rem;
+        top: 13rem;
     }
     .proyectos__foto {
         position: relative;
         display: flex;
         align-content: start;
+        margin: 2rem 3rem;
     }
 }
 
@@ -655,9 +960,8 @@ section {
         width: 60vw;
     }
     .proyectos__info {
-        width: 40%;
         top: 100px;
-        left: -120px;
+        left: -140px;
         height: max-content;
     }
     .proyectos__container--iz {
@@ -665,12 +969,16 @@ section {
     }
     .proyectos__info--iz {
         top: 100px;
-        left: 130px;
+        left: 150px;
     }
     .proyectos__tittle {
         font-size: 4rem;
         top: 13rem;
         left: -13rem;
+    }
+    .proyectos__tittle--branding{
+        left: -11rem;
+        top: 11rem;
     }
 
 }
@@ -820,290 +1128,6 @@ section {
     }
 }
 
-/* ----------------------------*/
-/* ------SOBRE MI-----------*/
-/* ----------------------------*/
-
-
-/*seccion sobre mi*/
-.about {
-    padding: 20px;
-    margin: 4rem auto;
-}
-.about__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-.about__info {
-    margin-bottom: 2rem;
-    margin-top: 4rem;
-}
-.about__list {
-    list-style: none;
-    padding: 0;
-}
-.about__list li {
-    margin: 10px 0;
-}
-.about__photo-container {
-    display: flex;
-    justify-content: center;
-}
-.about__img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-/*seccion Curriculum*/
-.curriculum__container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 4rem 2rem;
-}
-.curriculum__tittle {
-    padding-bottom: 3rem;
-}
-.curriculum__subtittle {
-    padding-bottom: 1rem;
-}
-.curriculum__fila {
-    display: flex;
-    flex-direction: column;
-    text-align: start;
-    justify-content: center;
-}
-.educacioncard__izq,
-.educacioncard__der {
-    background-color: var(--background-color);
-    position: relative;
-    margin-bottom: 2rem;
-    border-radius: 5px;
-    padding: 2rem;
-}
-.curriculum__izq {
-    border-right: 2px solid var(--secondary-color);
-    padding-right: 1rem;
-    display: flex;
-    flex-direction: column;
-
-}
-.curriculum__der {
-    border-left: 2px solid var(--secondary-color);
-    padding-left: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-.universidad {
-    color: var(--secondary-color);
-    font-size: 1rem;
-    font-weight: bold;
-    display: block;
-}
-.fecha,
-.pais {
-    color: var(--secondary-color);
-}
-.educacioncard__izq {
-    border-right: 3px solid var(--secondary-color);
-}
-.educacioncard__der {
-    border-left: 3px solid var(--secondary-color);
-}
-.conectori {
-    height: 2px;
-    background-color: var(--secondary-color);
-    width: 1rem;
-    position: absolute;
-    top: 50%;
-    right: -1rem;
-    z-index: 1;
-}
-.circuloi {
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
-    float: right;
-    position: relative;
-    bottom: 4px;
-}
-.conectord {
-    height: 2px;
-    background-color: var(--secondary-color);
-    width: 1rem;
-    position: absolute;
-    top: 50%;
-    left: -1rem;
-    z-index: 1;
-}
-.circulod {
-    display: block;
-    height: 10px;
-    width: 10px;
-    border-radius: 50%;
-    background-color: var(--secondary-color);
-    float: left;
-    position: relative;
-    bottom: 4px;
-}
-
-/*seccion Habilidades*/
-.skills {
-    width: 100%;
-    background-color: var(--background-color);
-}
-.skills__container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 2rem 2rem;
-    text-align: center;
-}
-.skills__tittle {
-    font-size: 3rem;
-}
-.skills__info {
-    display: flex;
-    justify-content: space-between;
-}
-.skills__barra {
-    background-color: #c0c0c0;
-    width: 100%;
-    height: 10px;
-    margin: 10px 0;
-}
-.skills__lista,
-.skills__porcentaje{
-    font-size: 2rem;
-}
-
-/*Estos estilos serán aplicados en forma de clases a los contenedores a través de java script*/
-.skills__barra--sk {
-    background-color: var(--secondary-color);
-    width: 92%;
-    height: 10px;
-    animation: sk 2s forwards;
-}
-.skills__barra--max {
-    background-color: var(--secondary-color);
-    width: 86%;
-    height: 10px;
-    animation: max 2s forwards;
-}
-.skills__barra--blender{
-    background-color: var(--secondary-color);
-    width: 90%;
-    height: 10px;
-    animation: blender 2s forwards;
-}
-.skills__barra--ai {
-    background-color: var(--secondary-color);
-    width: 96%;
-    height: 10px;
-    animation: ai 2s forwards;
-}
-.skills__barra--ps {
-    background-color: var(--secondary-color);
-    width: 96%;
-    height: 10px;
-    animation: ps 2s forwards;
-}
-.skills__barra--figma {
-    background-color: var(--secondary-color);
-    width: 96%;
-    height: 10px;
-    animation: figma 2s forwards;
-}
-
-/*creo las animaciones de las barras con los puntos de inicio y fin del recorrido, que luego serán activadas con JS cada uno debe tener el nombre de la animacion correspondiente*/
-@keyframes sk {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 92%;
-    }
-}
-@keyframes max {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 86%;
-    }
-}
-@keyframes blender {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 90%;
-    }
-}
-@keyframes ai {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 96%;
-    }
-}
-@keyframes ps {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 70%;
-    }
-}
-@keyframes figma {
-    0% {
-        width: 0;
-    }
-    100% {
-        width: 92%;
-    }
-}
-
-
-@media (min-width: 768px) {
-    .curriculum__fila {
-        display: flex;
-        flex-direction: row;
-        padding: 0;
-    }
-    .curriculum__der,
-    .curriculum__izq {
-        max-width: 50vw;
-    }
-    .about__container {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-    }
-    .about__info {
-        flex: 1;
-        margin-right: 20px;
-    }
-    .about__photo-container {
-        flex: 1;
-        justify-content: flex-start;
-    }
-}
-
-@media (min-width: 1024px) {
-    .curriculum__der,
-    .curriculum__izq {
-        max-width: 50%;
-    }
-}
 
 /* ----------------------------*/
 /* ------CONTACTO -----------*/
@@ -1123,6 +1147,10 @@ section {
     padding-top: 8rem;
     height: 100vh;
     color: rgb(0, 0, 0);
+}
+.contact__title{
+    font-size: 3rem;
+    padding-bottom: 1rem;
 }
 .contact__form {
     display: flex;
