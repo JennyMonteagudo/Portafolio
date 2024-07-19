@@ -114,13 +114,14 @@ section {
     visibility: hidden;
 }
 .navbar__ul{
+    list-style:none;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
-.navbar__ul.visible {
+.navbar__menu.visible {
     opacity: 1;
     visibility: visible;
 }
@@ -138,6 +139,13 @@ section {
 }
 .navbar__cerrar {
     color: var(--primary-color);
+    padding-bottom: 3rem;
+}
+.navbar__cerrar:hover {
+    color: var(--secondary-color);
+}
+.navbar__abrir:hover {
+    color: var(--secondary-color);
 }
 
 /* ----------------------------*/
@@ -222,13 +230,6 @@ section {
     .navbar__ul{
         display: flex;
         flex-direction: row;
-        align-items: center;
-        position: static;
-        padding: 0;
-        height: 0px;
-        opacity: 1;
-        visibility: visible;
-        box-shadow: none;
     }
     .navbar__link {
         color: var(--background-colordark);
