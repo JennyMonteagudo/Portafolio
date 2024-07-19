@@ -1,3 +1,7 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* ----------------------------*/
 /* ------RESETEO-----------*/
 /* ----------------------------*/
@@ -14,8 +18,6 @@
     --background-colordark: #333;
     --text-color: #0c0c0c;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ----------------------------*/
 /* ------GENERALES-----------*/
@@ -237,7 +239,7 @@ section {
         flex-direction: row;
     }
     .navbar__link {
-        color: var(--background-colordark);
+        color: var(--text-color);
     }
     .navbar__link:hover {
         color: var(--secondary-color);
