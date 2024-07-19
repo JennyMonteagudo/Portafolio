@@ -7,6 +7,14 @@
     box-sizing: border-box;
 }
 
+:root {
+    --primary-color: white;
+    --secondary-color: #f1953e;
+    --background-color: #fbeee3;
+    --background-colordark: #333;
+    --text-color: #0c0c0c;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ----------------------------*/
@@ -57,7 +65,7 @@ section {
 /* ------HEADER-----------*/
 /* ----------------------------*/
 .header {
-    background-color: #ffffff;
+    background-color: var(--primary-color);
     display: flex;
     position: fixed;
     z-index: 3;
@@ -80,10 +88,10 @@ section {
     font-weight: 900;
     font-style: normal;
     font-size: 2rem;
-    color: #020202;
+    color: var(--text-color);
 }
 .navbar__jenny:hover{
-    color: #f1953e;
+    color: var(--secondary-color);
 }
 .navbar__logo{
     text-decoration: none;
@@ -98,7 +106,7 @@ section {
     top: 0;
     right: 0;
     height: 500px;
-    background-color: #333;
+    background-color: var(--background-colordark);
     padding: 3rem;
     gap: 1rem;
     z-index: 0;
@@ -114,15 +122,15 @@ section {
     margin-left: 1rem;
 }
 .navbar__link {
-    color: rgb(255, 255, 255);
+    color: var(--primary-color);
     text-decoration: none;
 }
 .navbar__link:hover {
-    color: rgb(238, 168, 63);
+    color: var(--secondary-color);
     text-decoration: none;
 }
 .navbar__cerrar {
-    color: white;
+    color: var(--primary-color);
 }
 
 /* ----------------------------*/
@@ -130,7 +138,7 @@ section {
 /* ----------------------------*/
 .footer {
     background-color: #333;
-    color: rgb(255, 255, 255);
+    color: var(--primary-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,15 +174,15 @@ section {
 .footerContact__button {
     margin-top: 1rem;
     padding: 0.5rem;
-    background: #f1953e;
-    color: white;
+    background: var(--secondary-color);
+    color: var(--text-color);
     border: none;
     cursor: pointer;
     border-radius: 5px;
 }
 .footerContact__button:hover {
-    background: #fbeee3;
-    color: rgb(26, 26, 26);
+    background: var(--background-color);
+    color: var(--background-colordark);
 }
 .contactrrss {
     display: flex;
@@ -184,11 +192,11 @@ section {
     padding-top: 3rem;
 }
 .contactrrss__a {
-    color: rgb(255, 255, 255);
+    color: var(--primary-color);
     font-size: 2rem;
 }
 .contactrrss__a:hover {
-    color: #f1953e;
+    color: var(--secondary-color);
 }
 
 /*Adaptabilidad del header y el footer*/
@@ -205,10 +213,10 @@ section {
         box-shadow: none;
     }
     .navbar__link {
-        color: rgb(6, 6, 6);
+        color: var(--background-colordark);
     }
     .navbar__link:hover {
-        color: rgb(238, 168, 63);
+        color: var(--secondary-color);
     }
     .navbar__cerrar {
         display: none;
@@ -352,7 +360,7 @@ section {
     z-index: 10;
     bottom: 50%;
     right: 40%;
-    color: rgb(255, 255, 255);
+    color: var(--primary-color);
     display: none;
 }
 .gallery__name:hover {
@@ -361,17 +369,17 @@ section {
 .gallery__enlace {
     padding-top: 1rem;
     text-decoration: none;
-    color: #333;
+    color: var(--background-colordark);
 }
 .gallery__next {
-    color: #333;
+    color: var(--background-colordark);
     font-size: 1rem;
 }
 .gallery__enlace:hover {
-    color: #f1953e;
+    color: var(--secondary-color);
 }
 .gallery__next:hover {
-    color: #f1953e;
+    color: var(--secondary-color);
 }
 
 /* Estilos del acordeon de Servicios */
@@ -407,7 +415,7 @@ section {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #fbeee3;
+    background-color: var(--background-color);
     text-align: center;
     padding: 2rem;
     cursor: pointer;
@@ -415,20 +423,20 @@ section {
     border: 5px;
 }
 .accordion__header:hover {
-    color: #f1953e;
+    color: var(--secondary-color);
     box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1),
         -4px -4px 5px rgba(179, 171, 171, 0.377);
 }
 .accordion__content {
     display: none;
     padding: 15px;
-    color: rgb(51, 51, 51);
+    color: var(--background-colordark);
 }
 .acordion__h4{
     font-size: 1.5rem;
     padding-top: 3rem;
     padding-bottom: 1rem;
-    color: #f1953e;
+    color: var(--background-colordark);
 }
 
 /* Adaptabilidad de la página de Home */
@@ -513,7 +521,7 @@ section {
     top: 50%;
     transform: translateY(-50%);
     border: none;
-    color: rgb(41, 41, 41);
+    color: var(--background-colordark);
     font-size: 24px;
     cursor: pointer;
     padding: 10px;
@@ -567,7 +575,7 @@ section {
     z-index: 1;
 }
 .proyectos__info {
-    color: #333;
+    color: var(--background-colordark);
     display: flex;
     flex-direction: column;
     background-color: #fbeee3;
@@ -583,10 +591,10 @@ section {
     text-decoration: none;
     color: inherit;
     text-align: start;
-    color: #f58721;
+    color: var(--secondary-color);
 }
 .proyectos__link:hover {
-    color: #001f83;
+    color: var(--background-colordark);
 }
 
 
@@ -685,7 +693,7 @@ section {
 .project__title {
     font-size: 3em;
     margin: 10px 0;
-    color: #f1953e;
+    color: var(--secondary-color);
 }
 .project__subtitle {
     font-size: 1.5em;
@@ -767,7 +775,7 @@ section {
     .project__main {
         max-height: 700px;
         overflow: hidden;
-        background-color: #f1953e;
+        background-color: var(--secondary-color);
     }
     .project__main-image {
         width: 100%;
@@ -853,44 +861,44 @@ section {
 }
 .educacioncard__izq,
 .educacioncard__der {
-    background-color: #fbeee3;
+    background-color: var(--background-color);
     position: relative;
     margin-bottom: 2rem;
     border-radius: 5px;
     padding: 2rem;
 }
 .curriculum__izq {
-    border-right: 2px solid #f58721;
+    border-right: 2px solid var(--secondary-color);
     padding-right: 1rem;
     display: flex;
     flex-direction: column;
 
 }
 .curriculum__der {
-    border-left: 2px solid #f58721;
+    border-left: 2px solid var(--secondary-color);
     padding-left: 1rem;
     display: flex;
     flex-direction: column;
 }
 .universidad {
-    color: #f58721;
+    color: var(--secondary-color);
     font-size: 1rem;
     font-weight: bold;
     display: block;
 }
 .fecha,
 .pais {
-    color: #f58721;
+    color: var(--secondary-color);
 }
 .educacioncard__izq {
-    border-right: 3px solid #f58721;
+    border-right: 3px solid var(--secondary-color);
 }
 .educacioncard__der {
-    border-left: 3px solid #f58721;
+    border-left: 3px solid var(--secondary-color);
 }
 .conectori {
     height: 2px;
-    background-color: #f1953e;
+    background-color: var(--secondary-color);
     width: 1rem;
     position: absolute;
     top: 50%;
@@ -902,14 +910,14 @@ section {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #f1953e;
+    background-color: var(--secondary-color);
     float: right;
     position: relative;
     bottom: 4px;
 }
 .conectord {
     height: 2px;
-    background-color: #f1953e;
+    background-color: var(--secondary-color);
     width: 1rem;
     position: absolute;
     top: 50%;
@@ -921,7 +929,7 @@ section {
     height: 10px;
     width: 10px;
     border-radius: 50%;
-    background-color: #f1953e;
+    background-color: var(--secondary-color);
     float: left;
     position: relative;
     bottom: 4px;
@@ -930,7 +938,7 @@ section {
 /*seccion Habilidades*/
 .skills {
     width: 100%;
-    background-color: #fbeee3;
+    background-color: var(--background-color);
 }
 .skills__container {
     display: flex;
@@ -957,45 +965,45 @@ section {
     font-size: 2rem;
 }
 
-/*este estilo se aplicar[a luegocon java script*/
+/*Estos estilos serán aplicados en forma de clases a los contenedores a través de java script*/
 .skills__barra--sk {
-    background-color: #f1953e;
+    background-color: var(--secondary-color);
     width: 92%;
     height: 10px;
     animation: sk 2s forwards;
 }
 .skills__barra--max {
-    background-color: #f1953e;
+    background-color: var(--secondary-color);
     width: 86%;
     height: 10px;
     animation: max 2s forwards;
 }
 .skills__barra--blender{
-    background-color: #f1953e;
+    background-color: var(--secondary-color);
     width: 90%;
     height: 10px;
     animation: blender 2s forwards;
 }
 .skills__barra--ai {
-    background-color: #f1953e;
+    background-color: var(--secondary-color);
     width: 96%;
     height: 10px;
     animation: ai 2s forwards;
 }
 .skills__barra--ps {
-    background-color: #f1953e;
+    background-color: var(--secondary-color);
     width: 96%;
     height: 10px;
     animation: ps 2s forwards;
 }
 .skills__barra--figma {
-    background-color: #f1953e;
+    background-color: var(--secondary-color);
     width: 96%;
     height: 10px;
     animation: figma 2s forwards;
 }
 
-/*creo las animaciones de las barras*/
+/*creo las animaciones de las barras con los puntos de inicio y fin del recorrido, que luego serán activadas con JS cada uno debe tener el nombre de la animacion correspondiente*/
 @keyframes sk {
     0% {
         width: 0;
@@ -1061,12 +1069,10 @@ section {
         justify-content: space-between;
         text-align: left;
     }
-
     .about__info {
         flex: 1;
         margin-right: 20px;
     }
-
     .about__photo-container {
         flex: 1;
         justify-content: flex-start;
@@ -1074,7 +1080,6 @@ section {
 }
 
 @media (min-width: 1024px) {
-
     .curriculum__der,
     .curriculum__izq {
         max-width: 50%;
@@ -1086,7 +1091,7 @@ section {
 /* ----------------------------*/
 /* Estilos del formulario de contacto */
 .contact {
-    background-color: #fbeee3;
+    background-color: var(--background-color);
     height: 100vh;
     width: 100vw;
 }
@@ -1115,14 +1120,14 @@ section {
 .contact__button {
     margin-top: 1rem;
     padding: 0.5rem;
-    background: #f1953e;
-    color: white;
+    background: var(--secondary-color);
+    color: var(--primary-color);
     border: none;
     cursor: pointer;
 }
 .contact__button:hover {
-    background: #333;
-    color: white;
+    background: var(--background-colordark);
+    color: var(--primary-color);
 }
 .contactrrss {
     display: flex;
@@ -1131,7 +1136,7 @@ section {
     padding-top: 3rem;
 }
 .contactrrss__a--section{
-    color: rgb(0, 0, 0);
+    color: var(--text-color);
     font-size: 2rem;
 }
 @media (min-width: 600px) {

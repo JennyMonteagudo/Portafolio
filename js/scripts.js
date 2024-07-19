@@ -1,21 +1,28 @@
+//MENU DESPLEGABLE MOBILE
 
-
-//MENU DESPLEGABLE MOBILE//
-
-//cree las variables en las que selecciono los elementos del menú a utilizar
+// Selecciona el menú de navegación y los botones de abrir y cerrar
 const nav = document.querySelector(".navbar__menu");
 const abrir = document.querySelector("#abrir");
 const cerrar = document.querySelector("#cerrar");
 
-//Creo un evento para el icono de menu desplegable, de modo que al hacerle click se agrega la clase visible que lo muestra.
-abrir.addEventListener("click", () => {
-    nav.classList.add("visible");
-})
+// Comprueba si el botón de abrir existe antes de agregarle el event listener
+if (abrir) {
+    abrir.addEventListener("click", () => {
+        nav.classList.add("visible");
+    });
+} else {
+    console.error('El elemento "abrir" no se encuentra en el DOM');
+}
 
-//Creo un evento para el icono de cerrar, de modo que al hacerle click se quita la clase visible y se oculta el menú desplegable.
-cerrar.addEventListener("click", () => {
-    nav.classList.remove("visible");
-})
+// Comprueba si el botón de cerrar existe antes de agregarle el event listener
+if (cerrar) {
+    cerrar.addEventListener("click", () => {
+        nav.classList.remove("visible");
+    });
+} else {
+    console.error('El elemento "cerrar" no se encuentra en el DOM');
+}
+
 
 //TRANSICIÓN SUAVE a servicios
 

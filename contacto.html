@@ -4,27 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio Web</title>
-    <!-- Importación de fuentes y Font Awesome -->
+    <meta name="description" content="Portafolio de Diseño de Interiores y Branding. Proyectos destacados, habilidades y experiencia en diseño de espacios y creación de identidades visuales.">
+    <meta name="keywords" content="diseño, Cuba, interiores, portafolio, branding, diseñador, la Habana, identidad visual, marca">
+    <title>Contacto</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Ubuntu:wght@700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Importación de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body class="bodyContact">
     <header class="header">
         <nav class="navbar">
             <!-- Logo para la navegación a Home -->
-            <a href="index.html" class="navbar__logo"><p class="navbar__jenny">JENNY</p></a>
+            <a title="enlace a la home" href="index.html" class="navbar__logo">
+                <p class="navbar__jenny">JENNY</p>
+            </a>
             <i id="abrir" class="fa-solid fa-bars navbar__abrir"></i>
             <!-- Menú de navegación -->
             <ul class="navbar__menu">
                 <i id="cerrar" class="fa-solid fa-xmark navbar__cerrar"></i>
-                <li class="navbar__item"><a href="sobremi.html" class="navbar__link">Sobre Mí</a></li>
-                <li class="navbar__item"><a href="portafolio.html" class="navbar__link">Portafolio</a></li>
-                <li class="navbar__item"><a href="index.html#servicios" class="navbar__link">Servicios</a></li>
-                <li class="navbar__item"><a href="contacto.html" class="navbar__link">Contacto</a></li>
+                <li class="navbar__item"><a title="Enlace a la página sobre mi" href="sobremi.html" class="navbar__link">Sobre Mí</a></li>
+                <li class="navbar__item"><a title="Enlace a la página de portafolio" href="portafolio.html" class="navbar__link">Portafolio</a></li>
+                <li class="navbar__item"><a title="Enlace a la sección de servicios" href="index.html#servicios" class="navbar__link">Servicios</a></li>
+                <li class="navbar__item"><a title="Enlace a la página de contacto"  href="contacto.html" class="navbar__link">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -33,19 +35,19 @@
         <div class="contact__container">
             <h2 class="contact__title">Contáctame</h2>
             <p>Te puedo ayudar a materializar tus ideas.</p>
-            <form class="contact__form">
+            <form action="#" method="get" class="contact__form">
                 <label for="name" class="contact__label">Nombre:</label>
                 <input type="text" id="name" name="name" class="contact__input">
                 <label for="email" class="contact__label">Email:</label>
                 <input type="email" id="email" name="email" class="contact__input">
                 <label for="message" class="contact__label">Mensaje:</label>
                 <textarea id="message" name="message" class="contact__textarea"></textarea>
-                <button type="submit" class="contact__button">Enviar</button>
+                <button title="botón para enviar el formulario" type="submit" class="contact__button">Enviar</button>
             </form>
             <div class="contactrrss">
-                <a class="contactrrss__a contactrrss__a--section" href=""><i class="fa-brands fa-instagram"></i></a>
-                <a class="contactrrss__a contactrrss__a--section" href=""><i class="fa-brands fa-linkedin-in"></i></a>
-                <a class="contactrrss__a contactrrss__a--section" href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a title="Enlace al instagram de mi marca Brava Designs" target="_blank" rel="noreferrer" class="contactrrss__a contactrrss__a--section" href="https://www.instagram.com/brava_designs?igsh=NHgzeWptMDI1aXhn"><i class="fa-brands fa-instagram"></i></a>
+                <a title="Enlace a mi linkedin" target="_blank" rel="noreferrer" class="contactrrss__a contactrrss__a--section" href="https://www.linkedin.com/in/jenny-monteagudo-hondares-43b558285?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a title="Enlace a mi linkedin" target="_blank" rel="noreferrer" class="contactrrss__a contactrrss__a--section" href="https://wa.link/ffpdm3"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
         </div>
     </section>
