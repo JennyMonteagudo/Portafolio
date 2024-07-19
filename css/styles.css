@@ -120,7 +120,7 @@ section {
     justify-content: center;
     gap: 1rem;
 }
-.navbar__menu.visible {
+.navbar__ul.visible {
     opacity: 1;
     visibility: visible;
 }
@@ -209,6 +209,17 @@ section {
 /*Adaptabilidad del header y el footer*/
 @media screen and (min-width: 768px) {
     .navbar__menu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: static;
+        padding: 0;
+        height: 0px;
+        opacity: 1;
+        visibility: visible;
+        box-shadow: none;
+    }
+    .navbar__ul{
         display: flex;
         flex-direction: row;
         align-items: center;
