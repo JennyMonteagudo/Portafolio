@@ -23,33 +23,6 @@ if (cerrar) {
     console.error('El elemento "cerrar" no se encuentra en el DOM');
 }
 
-
-//TRANSICIÓN SUAVE a servicios
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Selecciona todos los enlaces que apuntan a una sección específica de la página.
-    const links = document.querySelectorAll('a[href^="index.html#"]');
-
-    // Añade un evento 'click' a cada uno de los enlaces.
-    links.forEach(link => {
-        link.addEventListener('click', (event) => {
-            // Previene el comportamiento por defecto del enlace.
-            event.preventDefault();
-
-            // Obtiene el ID de la sección destino desde el atributo 'href' del enlace.
-            const targetId = link.getAttribute('href').split('#')[1];
-
-            // Selecciona la sección destino usando el ID obtenido.
-            const targetSection = document.getElementById(targetId);
-
-            // Desplaza suavemente la página hasta la sección destino.
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-});
-
 //ACORDEON DE SERVICIOS//
 
 document.addEventListener('DOMContentLoaded', function () {
